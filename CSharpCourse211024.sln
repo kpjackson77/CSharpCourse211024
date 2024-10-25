@@ -9,11 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld2", "HelloWorld2\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightConsole", "FlightConsole\FlightConsole.csproj", "{B83AF78D-5E44-4AB3-AD04-F39BE1F360DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightHandling", "FlightHandling\FlightHandling.csproj", "{D3F89535-2A44-4E4E-B291-E3D378B663D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightHandling", "FlightHandling\FlightHandling.csproj", "{D3F89535-2A44-4E4E-B291-E3D378B663D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightWinForms", "FlightWinForms\FlightWinForms.csproj", "{6200CC31-84CA-43E5-88A0-6A1ED4AECA99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightWinForms", "FlightWinForms\FlightWinForms.csproj", "{6200CC31-84CA-43E5-88A0-6A1ED4AECA99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightWpf", "FlightWpf\FlightWpf.csproj", "{044CFE91-4DE6-4FE6-8B07-759F65ACCA88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightWpf", "FlightWpf\FlightWpf.csproj", "{044CFE91-4DE6-4FE6-8B07-759F65ACCA88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightWeb", "FlightWeb\FlightWeb.csproj", "{68D4F216-8FD7-43A7-89B8-E34DF87709A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{044CFE91-4DE6-4FE6-8B07-759F65ACCA88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{044CFE91-4DE6-4FE6-8B07-759F65ACCA88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{044CFE91-4DE6-4FE6-8B07-759F65ACCA88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68D4F216-8FD7-43A7-89B8-E34DF87709A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68D4F216-8FD7-43A7-89B8-E34DF87709A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68D4F216-8FD7-43A7-89B8-E34DF87709A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68D4F216-8FD7-43A7-89B8-E34DF87709A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

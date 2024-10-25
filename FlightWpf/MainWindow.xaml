@@ -7,8 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="230" Width="560">
 	<Grid>
-		<Button Content="Button" HorizontalAlignment="Left" Margin="33,19,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-		<ListBox x:Name="PassengersList" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="103,17,265,34"/>
+		<Menu Height="30" VerticalAlignment="Top" >
+			<MenuItem Header="Options">
+				<MenuItem Header="Add Passenger" Command="{Binding Path=AddPassengerCommand}"/>
+				<MenuItem Header="Delete Passenger" Command="{Binding Path=DeletePassengerCommand}" CommandParameter="{Binding ElementName=PassengersList, Path=SelectedItem}" />
+			</MenuItem>
+		</Menu>
+		<Button Content="Add Passenger" HorizontalAlignment="Left" Command="{Binding Path=AddPassengerCommand}" Margin="44,45,0,0" VerticalAlignment="Top" Width="95" />
+		<ListBox ItemsSource="{Binding Path=Passengers}" x:Name="PassengersList" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="230,45,138,6"/>
+		<Button Content="Delete Passenger" HorizontalAlignment="Left" Command="{Binding Path=DeletePassengerCommand}" CommandParameter="{Binding ElementName=PassengersList, Path=SelectedItem}" Margin="44,80,0,0" VerticalAlignment="Top"/>
+
 
 	</Grid>
 </Window>

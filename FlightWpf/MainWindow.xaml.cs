@@ -18,26 +18,29 @@ namespace FlightWpf
   /// </summary>
   public partial class MainWindow : Window
   {
-  ObservableCollection<PassengerDetails> _passengers = new ObservableCollection<PassengerDetails>();
+  //ObservableCollection<PassengerDetails> _passengers = new ObservableCollection<PassengerDetails>();
     public MainWindow()
     {
       InitializeComponent();
-      PassengersList.ItemsSource = _passengers;
+      //PassengersList.ItemsSource = _passengers;
+
+      DataContext = new MainWindowVM();
+      
     }
-    private void Button_Click(object sender, RoutedEventArgs e)
-    {
-      AddWindow ad = new AddWindow();
-      IAddWindowBuilderVM builder = new PassengerDetailsBuilder();
-      ad.DataContext = builder;
-      ad.Owner = this;
-      if (ad.ShowDialog() ?? false)
-      {
-        var pd = builder.Build();
-        if (pd != null)
-        {
-          _passengers.Add(pd);
-        }
-      }
-    }
+    //private void Button_Click(object sender, RoutedEventArgs e)
+    //{
+    //  AddWindow ad = new AddWindow();
+    //  IAddWindowBuilderVM builder = new PassengerDetailsBuilder();
+    //  ad.DataContext = builder;
+    //  ad.Owner = this;
+    //  if (ad.ShowDialog() ?? false)
+    //  {
+    //    var pd = builder.Build();
+    //    if (pd != null)
+    //    {
+    //      _passengers.Add(pd);
+    //    }
+    //  }
+    //}
   }
 }
