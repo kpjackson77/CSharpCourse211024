@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,13 @@ namespace FlightHandling
 {
   public class PassengerDetails : DiagnosticCount<PassengerDetails>, IComparable<PassengerDetails>, IEquatable<PassengerDetails>
   {
+    [Key]
+    public int Id { get; set; }
+    [Required]
+    [StringLength(50)]
     public string Name { get; set; }
+    [Required]
+    [Range(0, 30)]
     public int Weight { get; set; }
 
     public PassengerDetails(string name, int weight)

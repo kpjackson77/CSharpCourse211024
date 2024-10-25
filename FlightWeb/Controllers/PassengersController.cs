@@ -1,4 +1,5 @@
 ﻿using FlightHandling;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,6 +15,7 @@ namespace FlightWeb.Controllers
         _passengers.Add(new PassengerDetails("Fred" + i, 10 + i));
       }
     }
+
     // GET: PassengersController
     public ActionResult Index()
     {
@@ -48,25 +50,33 @@ namespace FlightWeb.Controllers
         return View();
       }
     }
-
+    [Authorize()]
     // GET: PassengersController/Edit/5
-    public ActionResult Edit(int id)
+    public ActionResult Edit(string id)
     {
-      return View();
+      var pd = _passengers.FirstOrDefault(p => p.Name == id);
+      if (pd == null) return NotFound();
+      return View(pd);
     }
-
+    [Authorize()]
     // POST: PassengersController/Edit/5
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public ActionResult Edit(int id, IFormCollection collection)
+    public ActionResult Edit(string id, PassengerDetails collection)
     {
-      try
+      if (ModelState.IsValid)
       {
-        return RedirectToAction(nameof(Index));
-      }
-      catch
-      {
-        return View();
+        try
+        {
+          _passengers.Add(collection);
+          return RedirectToAction(nameof(Index));
+        }
+        catch
+        {
+          return View(collection);
+        }
+      }else{
+        return View(collection);
       }
     }
 

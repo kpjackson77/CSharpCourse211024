@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightWpf", "FlightWpf\Flig
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightWeb", "FlightWeb\FlightWeb.csproj", "{68D4F216-8FD7-43A7-89B8-E34DF87709A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{47844281-F92F-458D-95BB-B5E8AC8599CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{68D4F216-8FD7-43A7-89B8-E34DF87709A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68D4F216-8FD7-43A7-89B8-E34DF87709A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68D4F216-8FD7-43A7-89B8-E34DF87709A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47844281-F92F-458D-95BB-B5E8AC8599CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47844281-F92F-458D-95BB-B5E8AC8599CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47844281-F92F-458D-95BB-B5E8AC8599CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47844281-F92F-458D-95BB-B5E8AC8599CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

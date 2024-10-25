@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using FlightHandling;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace FlightWeb.Data
@@ -9,5 +10,6 @@ namespace FlightWeb.Data
         : base(options)
     {
     }
+    public virtual DbSet<PassengerDetails> Passengers { get; set; }
   }
 }
