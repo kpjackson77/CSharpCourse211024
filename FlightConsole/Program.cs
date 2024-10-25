@@ -1,4 +1,5 @@
 ﻿using FlightHandling;
+using System.Threading.Channels;
 
 namespace FlightConsole
 {
@@ -19,7 +20,7 @@ namespace FlightConsole
         //PassengerDetails[] details = new PassengerDetails[MAXPASSENGERS];
         List<PassengerDetails> details = new List<PassengerDetails>();
 
-       
+
         bool exit = false;
         do
         {
@@ -81,17 +82,40 @@ namespace FlightConsole
               nameToFind = Console.ReadLine();
               if (nameToFind != null)
               {
-                details.Sort();
-                int ind = details.BinarySearch(new PassengerDetails(nameToFind, 0));
-                if (ind == -1)
+                details.ForEach(p =>
                 {
-                  Console.WriteLine("Not found!");
-                }
-                else
-                {
-                  Console.WriteLine("Found:");
-                  details[ind].Output();
-                }
+                  if (p.Name == nameToFind)
+                  {
+                    Console.WriteLine(p.ToString());
+                  }
+                });
+                //var found = from p in details where p.Name == nameToFind select p;
+
+                //foreach (var item in found)
+                //{
+                //  Console.WriteLine(item);
+                //}
+                //var found = details.FirstOrDefault(p => p.Name == nameToFind);
+                //if (found != null)
+                //{
+                //  Console.WriteLine("Found:");
+                //  found.Output();
+                //}
+                //else
+                //{
+                //  Console.WriteLine("Not found!");
+                //}
+                //  details.Sort();
+                //  int ind = details.BinarySearch(new PassengerDetails(nameToFind, 0));
+                //  if (ind == -1)
+                //  {
+                //    Console.WriteLine("Not found!");
+                //  }
+                //  else
+                //  {
+                //    Console.WriteLine("Found:");
+                //    details[ind].Output();
+                //  }
               }
               break;
           }

@@ -1,0 +1,14 @@
+﻿<Window x:Class="FlightWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlightWpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="230" Width="560">
+	<Grid>
+		<Button Content="Button" HorizontalAlignment="Left" Margin="33,19,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+		<ListBox x:Name="PassengersList" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="103,17,265,34"/>
+
+	</Grid>
+</Window>

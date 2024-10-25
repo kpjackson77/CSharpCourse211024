@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightHandling", "FlightHan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightWinForms", "FlightWinForms\FlightWinForms.csproj", "{6200CC31-84CA-43E5-88A0-6A1ED4AECA99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightWpf", "FlightWpf\FlightWpf.csproj", "{044CFE91-4DE6-4FE6-8B07-759F65ACCA88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{6200CC31-84CA-43E5-88A0-6A1ED4AECA99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6200CC31-84CA-43E5-88A0-6A1ED4AECA99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6200CC31-84CA-43E5-88A0-6A1ED4AECA99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{044CFE91-4DE6-4FE6-8B07-759F65ACCA88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{044CFE91-4DE6-4FE6-8B07-759F65ACCA88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{044CFE91-4DE6-4FE6-8B07-759F65ACCA88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{044CFE91-4DE6-4FE6-8B07-759F65ACCA88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
